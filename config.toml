@@ -1,0 +1,7 @@
+short_break = 300
+long_break = 1800
+task_period = 1500
+track_file = "test.json"
+# must be a two element list
+size = [300,300]
+periods_before_long = 4
