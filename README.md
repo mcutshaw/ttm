@@ -13,3 +13,6 @@ A configurable pomodoro timer intended to be cross platform, leveraging PyQt6. T
 ## Usage
 - `poetry run python3 ttm.py`
 
+## Images
+![Main starting page](imgs/main.png)  
+![Timer page with interrupt button](imgs/timer.png)
