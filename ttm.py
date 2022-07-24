@@ -147,14 +147,17 @@ class TaskTimeManager(QtWidgets.QWidget):
                 self.suc_periods = 0
             if self.suc_periods == self.config["periods_before_long"]:
                 self.suc_periods = 0
+                self.timer_type = "long_break"
                 self.starttimer(self.config["long_break"])
             else:
+                self.timer_type = "short_break"
                 self.starttimer(self.config["short_break"])
         else:
             if self.timer_type == "":
                 self.datarecorder.short_break += 1
             elif self.timer_type == "long_break":
-                self.datarecorder.long_break += 1
+                self.datarecorder.long_breaks += 1
+            self.timer_type = "task_period"
             self.starttimer(self.config["task_period"])
 
         # prompt dialog box
