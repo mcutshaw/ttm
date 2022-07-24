@@ -153,7 +153,7 @@ class TaskTimeManager(QtWidgets.QWidget):
                 self.timer_type = "short_break"
                 self.starttimer(self.config["short_break"])
         else:
-            if self.timer_type == "":
+            if self.timer_type == "short_break":
                 self.datarecorder.short_break += 1
             elif self.timer_type == "long_break":
                 self.datarecorder.long_breaks += 1
